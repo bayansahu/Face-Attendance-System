@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Face Recognition</title>
+    </head>
+    <body>
+        <h1>Face Recognition</h1>
+        <form class="grid" action="/registration" method="POST">
+            <center>
+                {% if name %}
+                <h3 style="color: blue">Hello {{name}}, Your Facial data is register</h3>
+                {% endif %}
+            </center>
+            <label for="Name">Enter Your Name :</label>
+            <input type="text" name="name" id="name">
+            <br>
+            <br>
+            <label for="Roll">Enter Your Roll No. :</label>
+            <input type="number" name="roll" id="roll">
+
+            <center><input type="submit" class="file_submit"></center>
+        </form>
+
+        <form class="grid" action="/result" method="POST">
+            <br>
+            <br>
+            <br>
+            <center><input type="submit" class="live" ></center>
+            <br>
+            <center>
+                {% if na %}
+                <h3 style="color: green">Thank You {{na}}, You have been marked present in the sheet</h3>
+                {% endif %}
+            </center>
+        </form>
+    </body>
+</html>
